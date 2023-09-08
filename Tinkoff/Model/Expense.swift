@@ -6,11 +6,17 @@
 //
 
 import Foundation
+import UIKit
 
 //создаю модель
 
 struct Expense {
-    let date: Date
-    let description: String
-    let amount: Double
+    var image: UIImage
+    var title: String
+    var sum: String
+    var kind: String
+    var account: String
 }
+
+
+
