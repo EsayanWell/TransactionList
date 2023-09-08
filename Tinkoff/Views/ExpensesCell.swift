@@ -28,8 +28,8 @@ class ExpensesCell: UITableViewCell {
         addSubview(expenseSumLabel)
         addSubview(expenseKindLabel)
         addSubview(accountLabel)
-        backgroundColor = .brown
-        
+        backgroundColor = .darkGray
+        //MARK - sets
         configureImageView()
         configureTitleLabel()
         configureSumLabel()
@@ -38,7 +38,7 @@ class ExpensesCell: UITableViewCell {
         setConstraits()
         
     }
-
+    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -51,7 +51,7 @@ class ExpensesCell: UITableViewCell {
         accountLabel.text      = expense.account
         
     }
-    
+    //MARK: - configures
     func configureImageView() {
         //устанавливает радиус скругления углов
         expenseImageView.layer.cornerRadius = 25
@@ -65,6 +65,8 @@ class ExpensesCell: UITableViewCell {
         expenseTitleLabel.numberOfLines = 0
         //цвет текста
         expenseTitleLabel.textColor = .white
+        //шрифт
+        expenseTitleLabel.font = UIFont.systemFont(ofSize: 18, weight: .heavy)
         //позволяет автоматически уменьшать размер шрифта для соответствия доступному пространству и избежания усечения текста
         expenseTitleLabel.adjustsFontSizeToFitWidth = true
         expenseTitleLabel.translatesAutoresizingMaskIntoConstraints = false
@@ -85,6 +87,8 @@ class ExpensesCell: UITableViewCell {
         expenseKindLabel.numberOfLines = 0
         //цвет текста
         expenseKindLabel.textColor = .systemGray4
+        //шрифт
+        expenseKindLabel.font = UIFont.systemFont(ofSize: 15, weight: .medium)
         //позволяет автоматически уменьшать размер шрифта для соответствия доступному пространству и избежания усечения текста
         expenseKindLabel.adjustsFontSizeToFitWidth = true
         expenseKindLabel.translatesAutoresizingMaskIntoConstraints = false
@@ -95,11 +99,13 @@ class ExpensesCell: UITableViewCell {
         accountLabel.numberOfLines = 0
         //цвет текста
         accountLabel.textColor = .systemGray4
+        //шрифт
+        accountLabel.font = UIFont.systemFont(ofSize: 15, weight: .medium)
         //позволяет автоматически уменьшать размер шрифта для соответствия доступному пространству и избежания усечения текста
         accountLabel.adjustsFontSizeToFitWidth = true
         accountLabel.translatesAutoresizingMaskIntoConstraints = false
     }
-    
+    //MARK: - constraits
     func setConstraits() {
         NSLayoutConstraint.activate([
             expenseImageView.topAnchor.constraint(equalTo: topAnchor, constant: 10),
@@ -119,7 +125,6 @@ class ExpensesCell: UITableViewCell {
             
             accountLabel.topAnchor.constraint(equalTo: expenseSumLabel.topAnchor, constant: 30),
             accountLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20)
-            
         ])
     }
 }

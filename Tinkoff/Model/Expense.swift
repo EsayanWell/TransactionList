@@ -9,7 +9,6 @@ import Foundation
 import UIKit
 
 //создаю модель
-
 struct Expense {
     var image: UIImage
     var title: String
@@ -17,6 +16,3 @@ struct Expense {
     var kind: String
     var account: String
 }
-
-
-
