@@ -7,8 +7,7 @@
 
 import Foundation
 import UIKit
-
-//создаю модель
+//создаю модель cell
 struct Expense {
     var image: UIImage
     var title: String

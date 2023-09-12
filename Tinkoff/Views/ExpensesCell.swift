@@ -4,9 +4,8 @@
 //
 //  Created by Владимир Есаян on 08.09.2023.
 //
-
 import UIKit
-
+//MARK: - create ExpensesCell class
 class ExpensesCell: UITableViewCell {
     //создание элементов ячейки
     //иконка трат
@@ -22,36 +21,36 @@ class ExpensesCell: UITableViewCell {
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        //добавляем на view
+        //добавляем на view элементы
         addSubview(expenseImageView)
         addSubview(expenseTitleLabel)
         addSubview(expenseSumLabel)
         addSubview(expenseKindLabel)
         addSubview(accountLabel)
         backgroundColor = .darkGray
-        //MARK - sets
+        //MARK - sets (функции настройки элементов для cell)
         configureImageView()
         configureTitleLabel()
         configureSumLabel()
         configureKindLabel()
         configureAccountLabel()
         setConstraits()
-        
     }
-    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
+    //функция выполняет задачу обновления интерфейсных элементов на экране информацией из объекта Expense, переданного в качестве параметра
     func set(expense: Expense) {
         expenseImageView.image = expense.image
         expenseTitleLabel.text = expense.title
         expenseSumLabel.text   = expense.sum
         expenseKindLabel.text  = expense.kind
         accountLabel.text      = expense.account
-        
     }
+    
     //MARK: - configures
+    //настройки изображения
     func configureImageView() {
         //устанавливает радиус скругления углов
         expenseImageView.layer.cornerRadius = 25
@@ -60,6 +59,7 @@ class ExpensesCell: UITableViewCell {
         expenseImageView.translatesAutoresizingMaskIntoConstraints = false
     }
     
+    //настройки надписи
     func configureTitleLabel() {
         //количество линий будет рассчитываться динамически в зависимости от содержимого и доступного пространства в ячейке
         expenseTitleLabel.numberOfLines = 0
@@ -72,6 +72,7 @@ class ExpensesCell: UITableViewCell {
         expenseTitleLabel.translatesAutoresizingMaskIntoConstraints = false
     }
     
+    //настройка надписи суммы денег
     func configureSumLabel() {
         //количество линий будет рассчитываться динамически в зависимости от содержимого и доступного пространства в ячейке
         expenseSumLabel.numberOfLines = 0
@@ -82,6 +83,7 @@ class ExpensesCell: UITableViewCell {
         expenseSumLabel.translatesAutoresizingMaskIntoConstraints = false
     }
     
+    //настроки надписи вида трат
     func configureKindLabel() {
         //количество линий будет рассчитываться динамически в зависимости от содержимого и доступного пространства в ячейке
         expenseKindLabel.numberOfLines = 0
@@ -94,6 +96,7 @@ class ExpensesCell: UITableViewCell {
         expenseKindLabel.translatesAutoresizingMaskIntoConstraints = false
     }
     
+    //настройка надписи счета списания
     func configureAccountLabel() {
         //количество линий будет рассчитываться динамически в зависимости от содержимого и доступного пространства в ячейке
         accountLabel.numberOfLines = 0
@@ -105,7 +108,9 @@ class ExpensesCell: UITableViewCell {
         accountLabel.adjustsFontSizeToFitWidth = true
         accountLabel.translatesAutoresizingMaskIntoConstraints = false
     }
+    
     //MARK: - constraits
+    
     func setConstraits() {
         NSLayoutConstraint.activate([
             expenseImageView.topAnchor.constraint(equalTo: topAnchor, constant: 10),

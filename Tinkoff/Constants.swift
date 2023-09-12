@@ -7,6 +7,7 @@
 
 import UIKit
 
+//устанавливаем константы с фото (принудительно делаем inwrap)
 struct Images {
     static let health        = UIImage(named: "health")!
     static let shopping      = UIImage(named: "shopping")!

@@ -14,8 +14,8 @@
             filePath = "Tinkoff/Views/ExpensesCell.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "108"
-            endingLineNumber = "108"
+            startingLineNumber = "112"
+            endingLineNumber = "112"
             landmarkName = "ExpensesCell"
             landmarkType = "3">
          </BreakpointContent>
@@ -30,8 +30,8 @@
             filePath = "Tinkoff/Views/ExpensesCell.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "119"
-            endingLineNumber = "119"
+            startingLineNumber = "124"
+            endingLineNumber = "124"
             landmarkName = "setConstraits()"
             landmarkType = "7">
          </BreakpointContent>
@@ -46,8 +46,8 @@
             filePath = "Tinkoff/Views/ExpensesCell.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "127"
-            endingLineNumber = "127"
+            startingLineNumber = "132"
+            endingLineNumber = "132"
             landmarkName = "setConstraits()"
             landmarkType = "7">
          </BreakpointContent>
@@ -62,9 +62,9 @@
             filePath = "Tinkoff/Controller/ExpenseViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "67"
-            endingLineNumber = "67"
-            landmarkName = "createTableView()"
+            startingLineNumber = "69"
+            endingLineNumber = "69"
+            landmarkName = "congigureTableView()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -72,15 +72,63 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "AA9C4C96-B7FF-4850-9586-24C263BE4C78"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Tinkoff/Controller/ExpenseViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "71"
-            endingLineNumber = "71"
-            landmarkName = "createTableView()"
+            startingLineNumber = "73"
+            endingLineNumber = "73"
+            landmarkName = "congigureTableView()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "AA9C4C96-B7FF-4850-9586-24C263BE4C78 - 223772799ed39e0a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Tinkoff.ExpenseViewController.createTableView() -&gt; ()"
+                  moduleName = "Tinkoff"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/esayan_well/Desktop/GitHub/Tinkoff/Tinkoff/Controller/ExpenseViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "69"
+                  endingLineNumber = "69"
+                  offsetFromSymbolStart = "1676">
+               </Location>
+               <Location
+                  uuid = "AA9C4C96-B7FF-4850-9586-24C263BE4C78 - d884014c732cfb47"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Tinkoff.ExpenseViewController.congigureTableView() -&gt; ()"
+                  moduleName = "Tinkoff"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/esayan_well/Desktop/GitHub/Tinkoff/Tinkoff/Controller/ExpenseViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "70"
+                  endingLineNumber = "70"
+                  offsetFromSymbolStart = "2360">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "00968BB4-8D30-42FA-9929-BAE46816C812"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Tinkoff/Controller/ExpenseViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "57"
+            endingLineNumber = "57"
+            landmarkName = "congigureTableView()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
