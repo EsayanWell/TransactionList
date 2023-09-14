@@ -63,18 +63,19 @@
 			isa = PBXGroup;
 			children = (
 				6E6600542AAB197000B11A70 /* ExpensesCell.swift */,
-				6E034E072AA9C92D002E46BA /* Storyboards */,
 			);
 			path = Views;
 			sourceTree = "<group>";
 		};
-		6E034E072AA9C92D002E46BA /* Storyboards */ = {
+		6E0E98552AB31530003DF678 /* Expenses */ = {
 			isa = PBXGroup;
 			children = (
-				6E2FDEF32AA8788200360E99 /* Main.storyboard */,
-				6E2FDEF82AA8788300360E99 /* LaunchScreen.storyboard */,
+				6E034E032AA9C6BB002E46BA /* Model */,
+				6E034E062AA9C8A9002E46BA /* Views */,
+				6E034E022AA9C6AA002E46BA /* Controller */,
+				6E6600562AAB23F300B11A70 /* Constants.swift */,
 			);
-			path = Storyboards;
+			path = Expenses;
 			sourceTree = "<group>";
 		};
 		6E2FDEE12AA8788200360E99 = {
@@ -98,12 +99,11 @@
 			children = (
 				6E2FDEED2AA8788200360E99 /* AppDelegate.swift */,
 				6E2FDEEF2AA8788200360E99 /* SceneDelegate.swift */,
-				6E6600562AAB23F300B11A70 /* Constants.swift */,
-				6E034E062AA9C8A9002E46BA /* Views */,
-				6E034E032AA9C6BB002E46BA /* Model */,
-				6E034E022AA9C6AA002E46BA /* Controller */,
+				6E0E98552AB31530003DF678 /* Expenses */,
 				6E2FDEF62AA8788300360E99 /* Assets.xcassets */,
 				6E2FDEFB2AA8788300360E99 /* Info.plist */,
+				6E2FDEF32AA8788200360E99 /* Main.storyboard */,
+				6E2FDEF82AA8788300360E99 /* LaunchScreen.storyboard */,
 			);
 			path = Tinkoff;
 			sourceTree = "<group>";
