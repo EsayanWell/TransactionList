@@ -9,9 +9,9 @@ import Foundation
 import UIKit
 //создаю модель cell
 struct Expense {
-    var image: UIImage
-    var title: String
-    var sum: String
-    var kind: String
-    var account: String
+    let image: UIImage
+    let title: String
+    let sum: String
+    let kind: String
+    let account: String
 }
