@@ -9,15 +9,15 @@ import UIKit
 class ExpensesCell: UITableViewCell {
     //создание элементов ячейки
     //иконка трат
-    var expenseImageView = UIImageView()
+    let expenseImageView = UIImageView()
     //имя трат
-    var expenseTitleLabel = UILabel()
+    let expenseTitleLabel = UILabel()
     //сумма трат
-    var expenseSumLabel = UILabel()
+    let expenseSumLabel = UILabel()
     //вид трат
-    var expenseKindLabel = UILabel()
+    let expenseKindLabel = UILabel()
     //счет списанния
-    var accountLabel = UILabel()
+    let accountLabel = UILabel()
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
