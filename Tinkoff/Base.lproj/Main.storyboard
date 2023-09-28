@@ -27,13 +27,16 @@
         <!--Navigation Controller-->
         <scene sceneID="Zdu-ZV-IuD">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="2Jn-5O-2Bd" sceneMemberID="viewController">
+                <navigationController hidesBarsOnSwipe="YES" id="2Jn-5O-2Bd" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="blackTranslucent" id="IFo-m8-hDv">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="m51-XH-Aoc">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="J50-tN-El1"/>
                     </connections>

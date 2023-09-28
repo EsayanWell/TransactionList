@@ -21,6 +21,7 @@ class ExpensesCell: UITableViewCell {
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
+        
         // добавляем на view элементы
         addSubview(expenseImageView)
         addSubview(expenseTitleLabel)
@@ -89,7 +90,7 @@ class ExpensesCell: UITableViewCell {
         // количество линий будет рассчитываться динамически в зависимости от содержимого и доступного пространства в ячейке
         expenseKindLabel.numberOfLines = 0
         // цвет текста
-        expenseKindLabel.textColor = .systemGray4
+        expenseKindLabel.textColor = .white
         // шрифт
         expenseKindLabel.font = UIFont.systemFont(ofSize: 15, weight: .medium)
         // позволяет автоматически уменьшать размер шрифта для соответствия доступному пространству и избежания усечения текста
@@ -102,7 +103,7 @@ class ExpensesCell: UITableViewCell {
         // количество линий будет рассчитываться динамически в зависимости от содержимого и доступного пространства в ячейке
         accountLabel.numberOfLines = 0
         // цвет текста
-        accountLabel.textColor = .systemGray4
+        accountLabel.textColor = .white
         // шрифт
         accountLabel.font = UIFont.systemFont(ofSize: 15, weight: .medium)
         // позволяет автоматически уменьшать размер шрифта для соответствия доступному пространству и избежания усечения текста
