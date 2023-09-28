@@ -58,6 +58,8 @@ class ExpenseViewController: UIViewController {
         expenseTableView.register(ExpensesCell.self, forCellReuseIdentifier: identifire)
         // высота строк в таблице
         expenseTableView.rowHeight = 90
+        // отключение полоски сбоку при прокручивании
+        expenseTableView.showsVerticalScrollIndicator = false
         // отключение автоматических ограничения
         expenseTableView.translatesAutoresizingMaskIntoConstraints = false
         expenseTableView.backgroundColor = .darkGray
