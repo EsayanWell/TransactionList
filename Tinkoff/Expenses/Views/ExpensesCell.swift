@@ -5,30 +5,31 @@
 //  Created by Владимир Есаян on 08.09.2023.
 //
 import UIKit
-//MARK: - create ExpensesCell class
+// MARK: - create ExpensesCell class
 class ExpensesCell: UITableViewCell {
-    //создание элементов ячейки
-    //иконка трат
+    // создание элементов ячейки
+    // иконка трат
     let expenseImageView = UIImageView()
-    //имя трат
+    // имя трат
     let expenseTitleLabel = UILabel()
-    //сумма трат
+    // сумма трат
     let expenseSumLabel = UILabel()
-    //вид трат
+    // вид трат
     let expenseKindLabel = UILabel()
-    //счет списанния
+    // счет списанния
     let accountLabel = UILabel()
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        //добавляем на view элементы
+        // добавляем на view элементы
         addSubview(expenseImageView)
         addSubview(expenseTitleLabel)
         addSubview(expenseSumLabel)
         addSubview(expenseKindLabel)
         addSubview(accountLabel)
         backgroundColor = .darkGray
-        //MARK - sets (функции настройки элементов для cell)
+        
+        // MARK: - sets (функции настройки элементов для cell)
         configureImageView()
         configureTitleLabel()
         configureSumLabel()
@@ -40,7 +41,7 @@ class ExpensesCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
-    //функция выполняет задачу обновления интерфейсных элементов на экране информацией из объекта Expense, переданного в качестве параметра
+    // функция выполняет задачу обновления интерфейсных элементов на экране информацией из объекта Expense, переданного в качестве параметра
     func set(expense: Expense) {
         expenseImageView.image = expense.image
         expenseTitleLabel.text = expense.title
@@ -49,67 +50,67 @@ class ExpensesCell: UITableViewCell {
         accountLabel.text      = expense.account
     }
     
-    //MARK: - configures
-    //настройки изображения
+    // MARK: - configures
+    // настройки изображения
     func configureImageView() {
-        //устанавливает радиус скругления углов
+        // устанавливает радиус скругления углов
         expenseImageView.layer.cornerRadius = 25
-        //содержимое контейнера будет отображаться только в пределах его рамок, отсекая все, что находится за его пределами
+        // содержимое контейнера будет отображаться только в пределах его рамок, отсекая все, что находится за его пределами
         expenseImageView.clipsToBounds = true
         expenseImageView.translatesAutoresizingMaskIntoConstraints = false
     }
     
-    //настройки надписи
+    // настройки надписи
     func configureTitleLabel() {
-        //количество линий будет рассчитываться динамически в зависимости от содержимого и доступного пространства в ячейке
+        // количество линий будет рассчитываться динамически в зависимости от содержимого и доступного пространства в ячейке
         expenseTitleLabel.numberOfLines = 0
-        //цвет текста
+        // цвет текста
         expenseTitleLabel.textColor = .white
-        //шрифт
+        // шрифт
         expenseTitleLabel.font = UIFont.systemFont(ofSize: 18, weight: .heavy)
-        //позволяет автоматически уменьшать размер шрифта для соответствия доступному пространству и избежания усечения текста
+        // позволяет автоматически уменьшать размер шрифта для соответствия доступному пространству и избежания усечения текста
         expenseTitleLabel.adjustsFontSizeToFitWidth = true
         expenseTitleLabel.translatesAutoresizingMaskIntoConstraints = false
     }
     
-    //настройка надписи суммы денег
+    // настройка надписи суммы денег
     func configureSumLabel() {
-        //количество линий будет рассчитываться динамически в зависимости от содержимого и доступного пространства в ячейке
+        // количество линий будет рассчитываться динамически в зависимости от содержимого и доступного пространства в ячейке
         expenseSumLabel.numberOfLines = 0
-        //цвет текста
+        // цвет текста
         expenseSumLabel.textColor = .white
-        //позволяет автоматически уменьшать размер шрифта для соответствия доступному пространству и избежания усечения текста
+        // позволяет автоматически уменьшать размер шрифта для соответствия доступному пространству и избежания усечения текста
         expenseSumLabel.adjustsFontSizeToFitWidth = true
         expenseSumLabel.translatesAutoresizingMaskIntoConstraints = false
     }
     
-    //настроки надписи вида трат
+    // настроки надписи вида трат
     func configureKindLabel() {
-        //количество линий будет рассчитываться динамически в зависимости от содержимого и доступного пространства в ячейке
+        // количество линий будет рассчитываться динамически в зависимости от содержимого и доступного пространства в ячейке
         expenseKindLabel.numberOfLines = 0
-        //цвет текста
+        // цвет текста
         expenseKindLabel.textColor = .systemGray4
-        //шрифт
+        // шрифт
         expenseKindLabel.font = UIFont.systemFont(ofSize: 15, weight: .medium)
-        //позволяет автоматически уменьшать размер шрифта для соответствия доступному пространству и избежания усечения текста
+        // позволяет автоматически уменьшать размер шрифта для соответствия доступному пространству и избежания усечения текста
         expenseKindLabel.adjustsFontSizeToFitWidth = true
         expenseKindLabel.translatesAutoresizingMaskIntoConstraints = false
     }
     
-    //настройка надписи счета списания
+    // настройка надписи счета списания
     func configureAccountLabel() {
-        //количество линий будет рассчитываться динамически в зависимости от содержимого и доступного пространства в ячейке
+        // количество линий будет рассчитываться динамически в зависимости от содержимого и доступного пространства в ячейке
         accountLabel.numberOfLines = 0
-        //цвет текста
+        // цвет текста
         accountLabel.textColor = .systemGray4
-        //шрифт
+        // шрифт
         accountLabel.font = UIFont.systemFont(ofSize: 15, weight: .medium)
-        //позволяет автоматически уменьшать размер шрифта для соответствия доступному пространству и избежания усечения текста
+        // позволяет автоматически уменьшать размер шрифта для соответствия доступному пространству и избежания усечения текста
         accountLabel.adjustsFontSizeToFitWidth = true
         accountLabel.translatesAutoresizingMaskIntoConstraints = false
     }
     
-    //MARK: - constraits
+    // MARK: - constraits
     
     func setConstraits() {
         NSLayoutConstraint.activate([

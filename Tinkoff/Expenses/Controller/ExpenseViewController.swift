@@ -8,37 +8,35 @@
 import UIKit
 
 class ExpenseViewController: UIViewController {
-    //MARK: - инициализация UI
+    // MARK: - инициализация UI
     private let searchTextField = UITextField()
     private var expenseTableView = UITableView()
-    //создание идентивикатора
+    // создание идентивикатора
     private let identifire = "ExpensesCell"
     private var expenses: [Expense] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //изменение цвета
+        // изменение цвета
         view.backgroundColor = .darkGray
         title = "Операции"
-        //меняем цвет текста заголовка
+        // меняем цвет текста заголовка
         navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
-        //меняем шрифт текста заголовка
-        //let textFont = UIFont.systemFont(ofSize: 23, weight: .medium)
         congigureTableView()
         setTableViewDelegates()
         createSearch()
-        //приравняли массивы
+        // приравняли массивы
         expenses = fetchData()
         
     }
     
-    //создание поисковой строки
+    // создание поисковой строки
     func createSearch() {
-        //поисковая строка
-        //скругление поисковой строки
+        // поисковая строка
+        // скругление поисковой строки
         searchTextField.borderStyle = .roundedRect
         searchTextField.backgroundColor = .systemGray
-        //добавление лупы в placeholder в виде эмодзи
+        // добавление лупы в placeholder в виде эмодзи
         searchTextField.placeholder = "\u{1F50D} Поиск"
         searchTextField.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(searchTextField)
@@ -50,21 +48,21 @@ class ExpenseViewController: UIViewController {
         ])
     }
     
-    //MARK: - TableVIew (настройки)
+    // MARK: - TableVIew (настройки)
     func congigureTableView() {
-        //расположить на view,"view.bounds" используется, чтобы сделать UITableView равным по размеру главному виду
-        //plain-стиль таблтцы без разделителей между ячейками
+        // расположить на view,"view.bounds" используется, чтобы сделать UITableView равным по размеру главному виду
+        // plain-стиль таблтцы без разделителей между ячейками
         expenseTableView = UITableView(frame: view.bounds, style: .plain)
-        //"UITableViewCell.self" означает, что вы хотите зарегистрировать стандартный класс UITableViewCell для использования в вашей таблице.
-        //"forCellReuseIdentifier": Это строковый идентификатор, который будет связан с этим типом ячейки
+        // "UITableViewCell.self" означает, что вы хотите зарегистрировать стандартный класс UITableViewCell для использования в вашей таблице.
+        // "forCellReuseIdentifier": Это строковый идентификатор, который будет связан с этим типом ячейки
         expenseTableView.register(ExpensesCell.self, forCellReuseIdentifier: identifire)
-        //высота строк в таблице
+        // высота строк в таблице
         expenseTableView.rowHeight = 90
-        //отключение автоматических ограничения
+        // отключение автоматических ограничения
         expenseTableView.translatesAutoresizingMaskIntoConstraints = false
-        //добавялем на view
+        // добавялем на view
         view.addSubview(expenseTableView)
-        //set constraits
+        // set constraits
         NSLayoutConstraint.activate([
             expenseTableView.topAnchor.constraint(equalTo: view.topAnchor, constant: 170),
             expenseTableView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
@@ -73,40 +71,40 @@ class ExpenseViewController: UIViewController {
         ])
     }
     
-    //функция с установкой подписки на delegates
+    // функция с установкой подписки на delegates
     func setTableViewDelegates() {
-        //подписка на delegate и dataSource
+        // подписка на delegate и dataSource
         expenseTableView.delegate = self
         expenseTableView.dataSource = self
     }
 }
 
-//MARK: - extensions for ExpenseViewController
+// MARK: - extensions for ExpenseViewController
 extension ExpenseViewController: UITableViewDelegate, UITableViewDataSource {
     
-    //функция для отображения количества строк на экране
+    // функция для отображения количества строк на экране
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        //возвращает количество элементов в массиве
+        // возвращает количество элементов в массиве
         return expenses.count
     }
     
-    //настройка вида самой строки в таблице (каждый раз строка вызывается на экран, как только она находится в видимой части)
+    // настройка вида самой строки в таблице (каждый раз строка вызывается на экран, как только она находится в видимой части)
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        //создание cell(Метод dequeueReusableCell(withIdentifier:) вызывается на объекте tableView для получения переиспользуемой ячейки с определенным идентификатором (identifire). Этот идентификатор связан с определенным типом ячейки. Затем, с помощью оператора as!, результат этого вызова приводится к типу ExpensesCell, предполагая, что ячейка имеет этот тип. Если приведение типа не удается, это может вызвать сбой приложения, поэтому используется оператор as!, предполагая, что типы совпадают.)
+        // создание cell(Метод dequeueReusableCell(withIdentifier:) вызывается на объекте tableView для получения переиспользуемой ячейки с определенным идентификатором (identifire). Этот идентификатор связан с определенным типом ячейки. Затем, с помощью оператора as!, результат этого вызова приводится к типу ExpensesCell, предполагая, что ячейка имеет этот тип. Если приведение типа не удается, это может вызвать сбой приложения, поэтому используется оператор as!, предполагая, что типы совпадают.)
         let cell = tableView.dequeueReusableCell(withIdentifier: identifire) as! ExpensesCell
-        //получается объект расхода (Expense) из массива expenses на основе индекса строки (indexPath.row). indexPath.row указывает на текущую позицию в таблице
+        // получается объект расхода (Expense) из массива expenses на основе индекса строки (indexPath.row). indexPath.row указывает на текущую позицию в таблице
         let expense = expenses[indexPath.row]
-        //вызывается метод set(expense:) на объекте cell для настройки ячейки данными из объекта expense. Этот метод устанавливает значения для различных подвидов (subviews) ячейки на основе данных о расходе.
+        // вызывается метод set(expense:) на объекте cell для настройки ячейки данными из объекта expense. Этот метод устанавливает значения для различных подвидов (subviews) ячейки на основе данных о расходе.
         cell.set(expense: expense)
         
         return cell
     }
 }
 
-//MARK: - создание базы данных
+// MARK: - создание базы данных
 extension ExpenseViewController{
     
-    //функция не принимает аргументов и возвращает массив типа Expense (структура в модели)
+    // функция не принимает аргументов и возвращает массив типа Expense (структура в модели)
     func fetchData() -> [Expense] {
         let expense1   = Expense(image: Images.health, title: "Формула здоровья", sum: "-123,50", kind: "Аптеки", account: "дебетовая карта")
         let expense2   = Expense(image: Images.shopping, title: "SPAR", sum: "-79,99", kind: "Супермаркеты", account: "дебетовая карта")
