@@ -60,6 +60,7 @@ class ExpenseViewController: UIViewController {
         expenseTableView.rowHeight = 90
         // отключение автоматических ограничения
         expenseTableView.translatesAutoresizingMaskIntoConstraints = false
+        expenseTableView.backgroundColor = .darkGray
         // добавялем на view
         view.addSubview(expenseTableView)
         // set constraits
