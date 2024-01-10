@@ -81,7 +81,7 @@
 		6E2FDEE12AA8788200360E99 = {
 			isa = PBXGroup;
 			children = (
-				6E2FDEEC2AA8788200360E99 /* Tinkoff */,
+				6EE36C422B4EADD0008787A9 /* TransactionList */,
 				6E2FDEEB2AA8788200360E99 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -94,7 +94,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		6E2FDEEC2AA8788200360E99 /* Tinkoff */ = {
+		6EE36C422B4EADD0008787A9 /* TransactionList */ = {
 			isa = PBXGroup;
 			children = (
 				6E2FDEED2AA8788200360E99 /* AppDelegate.swift */,
@@ -105,7 +105,7 @@
 				6E2FDEF32AA8788200360E99 /* Main.storyboard */,
 				6E2FDEF82AA8788300360E99 /* LaunchScreen.storyboard */,
 			);
-			path = Tinkoff;
+			path = TransactionList;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -333,7 +333,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 3324CJVR4C;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Tinkoff/Info.plist;
+				INFOPLIST_FILE = TransactionList/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -361,7 +361,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 3324CJVR4C;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Tinkoff/Info.plist;
+				INFOPLIST_FILE = TransactionList/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
