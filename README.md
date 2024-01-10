@@ -1,5 +1,4 @@
 # TransactionsList
-# A one-page application simulating a list of expenses in a online bank
-# Приложение на одну страницу, симулирующее список затрат в онлайн банке
+# A one-page application simulating a list of expenses in an online bank, in which skills of working with UIKit elements, namely UITableView (creation, placement and filling) were practiced.
+# Приложение на одну страницу, симулирующее список затрат в онлайн банке, в котором отрабатывались навыки работы с элементами UIKit, а именно с UITableView (создание, размещение и заполнение). 
 
-https://github.com/EsayanWell/Tinkoff/assets/98737871/33f85095-a163-4c06-ba8a-cd9f46b91603
