@@ -20,7 +20,7 @@
 
 /* Begin PBXFileReference section */
 		6E034E042AA9C6EE002E46BA /* Expense.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Expense.swift; sourceTree = "<group>"; };
-		6E2FDEEA2AA8788200360E99 /* Tinkoff.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tinkoff.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6E2FDEEA2AA8788200360E99 /* TransactionList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TransactionList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E2FDEED2AA8788200360E99 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6E2FDEEF2AA8788200360E99 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		6E2FDEF12AA8788200360E99 /* ExpenseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseViewController.swift; sourceTree = "<group>"; };
@@ -89,7 +89,7 @@
 		6E2FDEEB2AA8788200360E99 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				6E2FDEEA2AA8788200360E99 /* Tinkoff.app */,
+				6E2FDEEA2AA8788200360E99 /* TransactionList.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -111,9 +111,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		6E2FDEE92AA8788200360E99 /* Tinkoff */ = {
+		6E2FDEE92AA8788200360E99 /* TransactionList */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6E2FDEFE2AA8788300360E99 /* Build configuration list for PBXNativeTarget "Tinkoff" */;
+			buildConfigurationList = 6E2FDEFE2AA8788300360E99 /* Build configuration list for PBXNativeTarget "TransactionList" */;
 			buildPhases = (
 				6E2FDEE62AA8788200360E99 /* Sources */,
 				6E2FDEE72AA8788200360E99 /* Frameworks */,
@@ -123,9 +123,9 @@
 			);
 			dependencies = (
 			);
-			name = Tinkoff;
+			name = TransactionList;
 			productName = Tinkoff;
-			productReference = 6E2FDEEA2AA8788200360E99 /* Tinkoff.app */;
+			productReference = 6E2FDEEA2AA8788200360E99 /* TransactionList.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -143,7 +143,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 6E2FDEE52AA8788200360E99 /* Build configuration list for PBXProject "Tinkoff" */;
+			buildConfigurationList = 6E2FDEE52AA8788200360E99 /* Build configuration list for PBXProject "TransactionList" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -156,7 +156,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				6E2FDEE92AA8788200360E99 /* Tinkoff */,
+				6E2FDEE92AA8788200360E99 /* TransactionList */,
 			);
 		};
 /* End PBXProject section */
@@ -383,7 +383,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		6E2FDEE52AA8788200360E99 /* Build configuration list for PBXProject "Tinkoff" */ = {
+		6E2FDEE52AA8788200360E99 /* Build configuration list for PBXProject "TransactionList" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6E2FDEFC2AA8788300360E99 /* Debug */,
@@ -392,7 +392,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6E2FDEFE2AA8788300360E99 /* Build configuration list for PBXNativeTarget "Tinkoff" */ = {
+		6E2FDEFE2AA8788300360E99 /* Build configuration list for PBXNativeTarget "TransactionList" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6E2FDEFF2AA8788300360E99 /* Debug */,
